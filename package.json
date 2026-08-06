@@ -1,0 +1,23 @@
+{
+  "name": "@vibers/admin-kit",
+  "version": "1.0.0",
+  "description": "Vibers 통합 어드민 연동 계약 + 서버 핸들러",
+  "license": "UNLICENSED",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./protocol": "./src/protocol.ts",
+    "./envelope": "./src/envelope.ts",
+    "./resources": "./src/resources.ts",
+    "./capabilities": "./src/capabilities.ts",
+    "./mutations": "./src/mutations.ts",
+    "./verify": "./src/verify.ts",
+    "./handler": "./src/handler.ts",
+    "./firestore-adapter": "./src/firestore-adapter.ts"
+  },
+  "files": ["src", "README.md", "CHANGELOG.md"],
+  "repository": { "type": "git", "url": "https://github.com/vibers-leo/vibers-admin-kit.git" },
+  "peerDependencies": { "typescript": ">=5" },
+  "peerDependenciesMeta": { "typescript": { "optional": true } }
+}
