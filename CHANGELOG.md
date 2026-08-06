@@ -20,3 +20,13 @@ protocol 1
 
 검증: 더굿·작당페스타에서 실동작 확인. 두 사이트가 같은 코드로 서로 다른
 capabilities를 신고하고, 중앙 어드민이 그에 맞춰 화면을 다르게 그린다.
+
+## v1.0.1 — 2026-08-07
+
+빌드 산출물(dist) 포함.
+
+v1.0.0은 `src/*.ts` 원본을 직접 노출했는데, Turbopack이 node_modules 안의
+TypeScript를 컴파일하지 않아 소비 프로젝트 빌드가 실패했다.
+  `Unknown module type ./node_modules/@vibers/admin-kit/src/index.ts`
+
+이제 컴파일된 `dist/*.js` + `*.d.ts`를 가리킨다. API 변경 없음.

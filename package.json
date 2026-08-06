@@ -1,23 +1,22 @@
 {
   "name": "@vibers/admin-kit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vibers 통합 어드민 연동 계약 + 서버 핸들러",
   "license": "UNLICENSED",
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./src/index.ts",
-    "./protocol": "./src/protocol.ts",
-    "./envelope": "./src/envelope.ts",
-    "./resources": "./src/resources.ts",
-    "./capabilities": "./src/capabilities.ts",
-    "./mutations": "./src/mutations.ts",
-    "./verify": "./src/verify.ts",
-    "./handler": "./src/handler.ts",
-    "./firestore-adapter": "./src/firestore-adapter.ts"
+    ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" },
+    "./protocol": { "types": "./dist/protocol.d.ts", "default": "./dist/protocol.js" },
+    "./envelope": { "types": "./dist/envelope.d.ts", "default": "./dist/envelope.js" },
+    "./resources": { "types": "./dist/resources.d.ts", "default": "./dist/resources.js" },
+    "./capabilities": { "types": "./dist/capabilities.d.ts", "default": "./dist/capabilities.js" },
+    "./mutations": { "types": "./dist/mutations.d.ts", "default": "./dist/mutations.js" },
+    "./verify": { "types": "./dist/verify.d.ts", "default": "./dist/verify.js" },
+    "./handler": { "types": "./dist/handler.d.ts", "default": "./dist/handler.js" },
+    "./firestore-adapter": { "types": "./dist/firestore-adapter.d.ts", "default": "./dist/firestore-adapter.js" }
   },
-  "files": ["src", "README.md", "CHANGELOG.md"],
-  "repository": { "type": "git", "url": "https://github.com/vibers-leo/vibers-admin-kit.git" },
-  "peerDependencies": { "typescript": ">=5" },
-  "peerDependenciesMeta": { "typescript": { "optional": true } }
+  "files": ["dist", "src", "README.md", "CHANGELOG.md"],
+  "repository": { "type": "git", "url": "https://github.com/vibers-leo/vibers-admin-kit.git" }
 }
