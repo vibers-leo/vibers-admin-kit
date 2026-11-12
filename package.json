@@ -14,6 +14,8 @@
     "./capabilities": { "types": "./dist/capabilities.d.ts", "default": "./dist/capabilities.js" },
     "./mutations": { "types": "./dist/mutations.d.ts", "default": "./dist/mutations.js" },
     "./verify": { "types": "./dist/verify.d.ts", "default": "./dist/verify.js" },
+    "./ui": { "types": "./dist/ui/index.d.ts", "default": "./dist/ui/index.js" },
+    "./ui.css": "./src/ui/admin-shell.css",
     "./handler": { "types": "./dist/handler.d.ts", "default": "./dist/handler.js" },
     "./firestore-adapter": { "types": "./dist/firestore-adapter.d.ts", "default": "./dist/firestore-adapter.js" }
   },

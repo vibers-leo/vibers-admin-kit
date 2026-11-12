@@ -58,6 +58,18 @@ createFirestoreAdapter({
 `VIBERS_ADMIN_SECRET`과 대조한다. 헤더 이름이 현장에서 세 갈래로 쓰이고 있어
 (`x-vibers-admin-secret` / `x-vibers-secret` / `x-vibers-apikey`) **전부 수용**한다.
 
+## UI 기준
+
+어드민 화면의 공통 기준은 `@vibers/admin-kit/ui`에서 제공하는
+`vibersAdminTokens`와 `admin-shell.css`다. Aceternity 구성요소는 화면별로
+선택해 사용하고, 각 프로젝트의 데이터·권한 경계는 유지한다.
+
+```ts
+import { vibersAdminTokens } from '@vibers/admin-kit/ui';
+```
+
+상세 적용 규칙은 [`docs/ui-adoption.md`](docs/ui-adoption.md)를 참고한다.
+
 ## 원본
 
 `vibers-home/packages/admin-{protocol,server}` 가 원본이다.

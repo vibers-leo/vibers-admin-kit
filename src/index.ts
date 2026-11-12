@@ -12,6 +12,7 @@ export * from './capabilities';
 export * from './mutations';
 export * from './verify';
 export * from './firestore-adapter';
+export * from './ui';
 
 // handler는 AdminActor를 자체 정의한다(mutations의 것과 이름이 겹침).
 // 계약 쪽 정의를 정본으로 두고 나머지만 내보낸다.

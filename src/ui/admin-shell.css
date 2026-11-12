@@ -1,0 +1,109 @@
+:root {
+  --vibers-admin-canvas: #f7f8fa;
+  --vibers-admin-surface: #ffffff;
+  --vibers-admin-surface-muted: #f1f3f5;
+  --vibers-admin-border: #e6e8eb;
+  --vibers-admin-text: #17191c;
+  --vibers-admin-text-muted: #69707a;
+  --vibers-admin-text-subtle: #9aa1aa;
+  --vibers-admin-accent: #111827;
+  --vibers-admin-accent-soft: #eef1f5;
+  --vibers-admin-success: #0a9f6e;
+  --vibers-admin-warning: #c98200;
+  --vibers-admin-danger: #d9485f;
+  --vibers-admin-focus: #2563eb;
+  --vibers-admin-sidebar-width: 248px;
+  --vibers-admin-sidebar-collapsed-width: 72px;
+  --vibers-admin-topbar-height: 64px;
+  --vibers-admin-right-rail-width: 296px;
+  --vibers-admin-page-padding: 32px;
+  --vibers-admin-card-gap: 16px;
+  --vibers-admin-radius-sm: 10px;
+  --vibers-admin-radius-md: 14px;
+  --vibers-admin-radius-lg: 18px;
+  --vibers-admin-shadow-card: 0 1px 2px rgba(17, 24, 39, 0.04), 0 8px 24px rgba(17, 24, 39, 0.05);
+  --vibers-admin-shadow-popover: 0 12px 36px rgba(17, 24, 39, 0.14);
+}
+
+.vibers-admin-shell {
+  min-height: 100dvh;
+  background: var(--vibers-admin-canvas);
+  color: var(--vibers-admin-text);
+}
+
+.vibers-admin-shell__sidebar {
+  position: sticky;
+  inset-block: 0;
+  align-self: flex-start;
+  width: var(--vibers-admin-sidebar-width);
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--vibers-admin-surface);
+  border-inline-end: 1px solid var(--vibers-admin-border);
+}
+
+.vibers-admin-shell__topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  min-height: var(--vibers-admin-topbar-height);
+  background: color-mix(in srgb, var(--vibers-admin-surface) 92%, transparent);
+  border-block-end: 1px solid var(--vibers-admin-border);
+  backdrop-filter: blur(16px);
+}
+
+.vibers-admin-shell__main {
+  min-width: 0;
+  max-width: var(--vibers-admin-content-max-width, 1440px);
+  padding: var(--vibers-admin-page-padding);
+}
+
+.vibers-admin-shell__right-rail {
+  width: var(--vibers-admin-right-rail-width);
+  flex: 0 0 var(--vibers-admin-right-rail-width);
+}
+
+.vibers-admin-card {
+  background: var(--vibers-admin-surface);
+  border: 1px solid var(--vibers-admin-border);
+  border-radius: var(--vibers-admin-radius-md);
+  box-shadow: var(--vibers-admin-shadow-card);
+}
+
+.vibers-admin-card--interactive {
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.vibers-admin-card--interactive:hover {
+  transform: translateY(-2px);
+  border-color: #d1d6dc;
+  box-shadow: var(--vibers-admin-shadow-popover);
+}
+
+.vibers-admin-focus-ring:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--vibers-admin-focus) 35%, transparent);
+  outline-offset: 2px;
+}
+
+@media (max-width: 1024px) {
+  .vibers-admin-shell__right-rail {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  :root {
+    --vibers-admin-page-padding: 16px;
+  }
+
+  .vibers-admin-shell__sidebar {
+    position: fixed;
+    z-index: 40;
+    transform: translateX(-100%);
+    transition: transform 220ms ease;
+  }
+
+  .vibers-admin-shell__sidebar[data-open='true'] {
+    transform: translateX(0);
+  }
+}
